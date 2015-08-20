@@ -1,0 +1,23 @@
+<h1>Listing fencers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fencers.each do |fencer| %>
+      <tr>
+        <td><%= link_to 'Show', fencer %></td>
+        <td><%= link_to 'Edit', edit_fencer_path(fencer) %></td>
+        <td><%= link_to 'Destroy', fencer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fencer', new_fencer_path %>

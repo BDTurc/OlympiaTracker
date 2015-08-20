@@ -19,7 +19,11 @@ gem 'rails_12factor', group: :production
 
 #used for XMLParse
 
-gem 'Nokogiri'
+gem 'nokogiri'
+
+#used for errors
+
+gem 'better_errors'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

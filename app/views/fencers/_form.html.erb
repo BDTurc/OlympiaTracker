@@ -1,0 +1,17 @@
+<%= form_for(@fencer) do |f| %>
+  <% if @fencer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fencer.errors.count, "error") %> prohibited this fencer from being saved:</h2>
+
+      <ul>
+      <% @fencer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
