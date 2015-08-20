@@ -1,5 +1,5 @@
 class AddAssociations < ActiveRecord::Migration
   def change
-  	add_reference :result, :fencer, index: true
+  	add_reference :results, :fencers, index: true
   end
 end
