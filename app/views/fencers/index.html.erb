@@ -1,4 +1,4 @@
-<h1>Listing fencers</h1>
+<h1>Olympia's Fencers</h1>
 
 <table>
   <thead>
@@ -10,14 +10,14 @@
   <tbody>
     <% @fencers.each do |fencer| %>
       <tr>
-        <td><%= link_to 'Show', fencer %></td>
-        <td><%= link_to 'Edit', edit_fencer_path(fencer) %></td>
-        <td><%= link_to 'Destroy', fencer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <h1><%= fencer.first_name %> Average Place <%= " #{fencer.average_place fencer.results}" %></h1>
+        <% total_touches = fencer.total_touches fencer.round_results %>
+        <% if "#{fencer.average_place fencer.results}" != "No Results" then %>
+        <h2> Total Touches Given <%= " #{total_touches[0]}" %> Total Touches Taken <%= " #{total_touches[1]}" %> Win-Loss = <%= "#{fencer.win_loss fencer.round_results}%" %></h2>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Fencer', new_fencer_path %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150820001124) do
+ActiveRecord::Schema.define(version: 20150821233229) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,9 +29,40 @@ ActiveRecord::Schema.define(version: 20150820001124) do
   create_table "results", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "fencers_id"
+    t.integer  "fencer_id"
+    t.string   "result_id"
+    t.string   "event_id"
+    t.string   "tournament_id"
+    t.string   "tournament_name"
+    t.integer  "entries"
+    t.string   "event_date"
+    t.integer  "place"
+    t.string   "rating_earned"
+    t.string   "event_rating"
   end
 
-  add_index "results", ["fencers_id"], name: "index_results_on_fencers_id", using: :btree
+  add_index "results", ["fencer_id"], name: "index_results_on_fencer_id", using: :btree
+
+  create_table "round_results", force: true do |t|
+    t.string   "event_id"
+    t.string   "tournament_id"
+    t.integer  "fencer_id"
+    t.string   "round_type"
+    t.integer  "opponent_id"
+    t.string   "opponent_first"
+    t.string   "opponent_last"
+    t.integer  "opponent_score"
+    t.integer  "opponent_seed"
+    t.integer  "score"
+    t.integer  "seed"
+    t.string   "victory"
+    t.integer  "opponent_club_id"
+    t.integer  "club_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "result_id"
+  end
+
+  add_index "round_results", ["result_id"], name: "index_round_results_on_result_id", using: :btree
 
 end

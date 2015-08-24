@@ -24,6 +24,7 @@ gem 'nokogiri'
 #used for errors
 
 gem 'better_errors'
+gem 'binding_of_caller'
 
 #used for secrets! Don't tell...
 

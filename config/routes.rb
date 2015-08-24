@@ -3,6 +3,13 @@ Rails.application.routes.draw do
 
   resources :results
 
+  controller :get_results do
+    get 'update_database' => :update_database
+    get 'get_results' => :get_results
+    get 'get_round_results' => :get_round_results
+    get 'get_lori' => :get_lori
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

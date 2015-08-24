@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event_id: MyString
+  tournament_id: MyString
+  fencer_id: 
+  round_type: MyString
+  opponent_id: 
+  opponent_first: MyString
+  opponent_last: MyString
+  opponent_score: 
+  opponent_seed: 
+  score: 
+  seed: 
+  victory: MyString
+  opponent_club_id: 
+  club_id: 
+
+two:
+  event_id: MyString
+  tournament_id: MyString
+  fencer_id: 
+  round_type: MyString
+  opponent_id: 
+  opponent_first: MyString
+  opponent_last: MyString
+  opponent_score: 
+  opponent_seed: 
+  score: 
+  seed: 
+  victory: MyString
+  opponent_club_id: 
+  club_id: 
